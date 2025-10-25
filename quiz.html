@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--Mandisa Harris-King Date: 10/24/2025 -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quiz Game</title>
+    </head>
+    <body>
+        <h1>Hi, I am just practicing JavaScript!</h1>
+        <script>
+            //simple quiz game. 
+            //first question
+            let answer = prompt("How many states are in the United States?");
+                if (answer === "50") { //converts string to number for comparison
+                console.log("Perfect! You got it!"); //prints to console if correct
+            }   else {
+                alert("Ouch! The correct answer is 50.");
+            }
+
+            //second question
+            let answer2 = prompt("How many cards are in a standard deck of playing cards?");
+                if (answer2 === "52") { //converts string to number for comparison
+                console.log("You are superstar. Well done!"); //prints to console if correct
+            }   else {
+                alert("Maybe next time. The correct answer is 52.");
+                }
+
+            //third question
+            let answer3 = prompt("Anna, elsa Kristoff and Olaf are characters from which Disney movie?");
+                if (answer3.toLowerCase() === "frozen") { //toLowerCase makes the answer not case sensitive
+                console.log("Awesome! You nailed it!"); //prints to console if correct
+            }   else {
+                alert("Sorry, that is wrong. The correct answer is Frozen.");
+                }
+            
+            //fourth question
+            let answer4 = prompt("What is the missing word in this saying: 'Treat others the way you want to be _______'?");
+                if (answer4.toLowerCase() === "treated") { 
+                console.log("Correct! You are on fire!"); //prints to console if correct
+            }   else {
+                alert("Incorrect. The correct answer is 'treated'.");
+                }
+
+        </script>
+    </body>
+</html>
