@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--Mandisa Harris-King Date: 10/24/2025 -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shopping Discount Calculator</title>
+    </head>
+    <body>
+        <h1>Questions</h1>
+            <p>1. Name a situation where you would need to create an "if statement. (There are many answers to this question.)
+            <p>2. When comparing values, in what data type is the result stored? (number, string, or Boolean?)</p>
+
+        <h1>Answers</h1>
+            <p>1. Using if statements is essential for validating user input or checking correctivity. For example, if a user tries to 
+            enter an invalid name when you&apos;re asking for a user&apos;s name, then JS will spit out the exact value, and we don&apos;t want that.
+            </p>
+            <p>2. When comparing values, the data type returned is a boolean value (true or false).</p>
+        
+        <script>
+            //Ask the user a question
+            //total and confirmed are the variables that the information will be stored in
+            let total = parseInt(prompt("How much did you spend?"));
+            let confirmed = confirm("$" + total + " total?" + " Click OK to continue!"); //using confirm verifies the amount entered and gives the option to "OK" or "Cancel"
+
+            //calculating the discount using if...else statements
+            if (total >= 100) { //if total is greater than or equal to 100
+                alert("20% off");
+            } else if (total >= 50) { //if total is greater than or equal to 50
+                alert("10% off");
+            } else { //if total is less than 50
+                alert("No discount");
+            }            
+
+            //Testing my code in the browser
+            //Customer types: 2500  → Confirm: $2500 total? → 20% off → 2500 >=100
+            //Customer types: 10  → Confirm: $10 total? → No discount → 10 < 50
+            //Customer types: 40  → Confirm: $40 total? → No discount → 40 < 50
+            //Customer types: 85  → Confirm: $85 total? → 10% off → 85 >= 50
+            //Customer types: 500  → Confirm: $500 total? → 20% off → 500 >=100
+        </script>
+    </body>
+</html>
