@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--Mandisa Harris Date: 11-14-2025-->
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>Average Gas Using Functions</title>
+    </head>
+
+    <body>
+        <h1>Using loops with snacks</h1>
+        
+        <h2>Question</h2>
+            <code>for (let i = 1; i &lt;= 5; i++) { <!--(&lt;= is <= )-->
+                console.log("Snack #" + i + "given to customer"); }</code>
+        
+        <h3>Use the code above to answer these questions: How many times does the loop execute?</h3>
+            
+        <!--Put the answer below-->
+            <p><strong>It will run 5 times.</strong></p>
+        
+        <h2>Activity</h2>
+                <h4>Check the console for snack messages!</h4>
+        
+        <!--Beginning of script-->
+        <script>
+            const username = prompt("Enter your name"); //Step 1 - Prompt for user's name
+
+            //step 2 initialize variables to zero
+            let entryCount = 0;
+            let total = 0;
+            let weeklyGas = 0;
+
+            //Step 3 - create a function to calculate average gas (calcGasAvg)
+            function calcGasAvg() {
+                weeklyGas = parseFloat(prompt("Enter your first's gas total. Enter -1 when you are done."));
+
+                while (weeklyGas !== -1) { //loop until user enters -1
+                    total += weeklyGas; //add weeklyGas to total
+                    entryCount++; //increment entryCount by 1
+                    weeklyGas = parseFloat(prompt("Enter your next week's gas total. Enter -1 when you are done."));
+                }
+
+                let averageGas;
+
+                if (entryCount > 0) { 
+                    averageGas = total / entryCount; //calculate average gas
+                } else {
+                    averageGas = 0;
+                }
+                return averageGas; 
+            }
+
+            //step 4 - 5 - call the function and assign it to a variable called gas
+
+            let gas = calcGasAvg();
+
+            //show the person's name and average weekly gas bill (2 decimal places)
+            confirm(username + "'s average weekly gas bill is " + gas.toFixed(2));
+
+            //step 6 - use "if" statement to display how many gas totals they entered
+            
+                if (entryCount === 0) { 
+                confirm("No gas totals were entered.");
+                } else if (entryCount === 1) {
+                confirm(`You entered ${entryCount} gas total.`);
+                } else {
+                confirm(`You entered ${entryCount} gas totals.`);
+                }
+
+
+        //Example to use to test code. 
+        //Enter Mandisa for the username
+        //Enter 100 for the first week's gas total (weeklyGas)
+        //Enter 150 for the next week's gas total (weeklyGas)
+        //Enter 300 for the next week's gas total (weeklyGas)
+        //Enter -1 to end the input
+        //Add totals 100 + 150 + 300 = 550 (total)
+        //3 entries (entryCount)
+        //Average gas = 550 (total) / 3 (entryCount)= 183.33 (averageGas)
+        //last to confirm should say: You entered 3 gas totals.
+
+        </script>
+    </body>
+</html>
