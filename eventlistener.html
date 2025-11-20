@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Doorbell Challenge</title>
+        <style>
+            body {
+                font-family: Arial;
+                text-align: center;
+                padding: 50px;
+                background: #f0f8ff;
+            }
+
+            h1 {
+                color: #2c3e50;
+            }
+
+            #main-text {
+                font-size: 2rem;
+                margin: 40px;
+                padding: 30px;
+                background: white;
+                border: 4px solid #3498db;
+                border-radius: 15px;;
+            }
+
+            button {
+                font-size: 1.3rem;
+                padding: 15px 30px;
+                margin: 15px;
+                background: #e74c3c;
+                color: white;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+
+            button:hover {background: #c0392b}
+        </style>
+    </head>
+
+    <body>
+        <h1>Ring the Doorbell</h1>
+        <p id="main-text"> a bunch of really valuable text</p>
+
+        <button id="ring-button">Ring Bell</button>
+        <button id="greet-button">Greet Friends</button>
+        <button id="panic-button">Panic!</button>
+        <button id="reset-button">Reset</button>
+
+        <script>
+            function youRang() {
+                //Step 1 select the paragraph element
+                const paragraph = document.querySelector("#main-text");
+
+                //step 2 change its text content
+                paragraph.textContent = "You rang...";
+                paragraph.style.color = "black";
+
+                //step 3 log a message to the console
+                console.log("You rang...");
+            }
+
+            function greetFriends() {
+                //Step 1 select the paragraph element
+                const paragraph = document.querySelector("#main-text");
+
+                //step 2 change its text content
+                paragraph.textContent = "Hello Friends!";
+                paragraph.style.color = "green";
+                
+                //step 3 log a message to the console
+                console.log("Hello Friends!"); 
+            }
+
+            function panicBttn() {
+                //Step 1 select the paragraph element
+                const paragraph = document.querySelector("#main-text");
+
+                //step 2 change its text content
+                paragraph.textContent = "Ahhhh!";
+                paragraph.style.color = "black";
+
+                //step 3 log a message to the console
+                console.log("Ahhhh!"); 
+            }
+
+            function resetB() {
+                //Step 1 select the paragraph element
+                const paragraph = document.querySelector("#main-text");
+
+                //step 2 change its text content
+                paragraph.textContent = "a bunch of really valuable text";
+                paragraph.style.color = "black";
+
+                //step 3 log a message to the console
+                console.log("a bunch of really valuable text"); 
+            }
+
+            // selecting the two buttons
+            const ringBtn = document.getElementById("ring-button"); //use getElementById for single and getElement(s) when addressing multiple
+            const greetBtn = document.getElementById("greet-button");
+            const panicBtn = document.getElementById("panic-button");
+            const resetBttn = document.getElementById("reset-button");
+
+            //connect the functions to the button clicks
+            ringBtn.addEventListener("click", youRang);
+            greetBtn.addEventListener("click", greetFriends);
+            panicBtn.addEventListener("click", panicBttn);
+            resetBttn.addEventListener("click", resetB);
+        </script>
+    </body>
+</html>
