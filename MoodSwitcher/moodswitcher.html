@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--Mandisa Harris-King 11-21-25-->
+<!--Questions-->
+<!--1. Why is the JavaScript textContent property safer than innerHTML? 
+      ANSWER: The textContent property is safer than innerHTML because it only prints the raw text and excludes the tags and it is display easier. innerHTML can pose security risk because it someone could input malicious code
+              and alter the HTML in a way it is not suppose to.   -->
+<!--2. If use an HTML text box on a page and it has an attribute (for example id="text")  and a corresponding DOM property (for example, const box = document.getElementById("text"). How do the two elements relate? 
+      ANSWER: They relate because they both are text fields and will accept text.-->
+<!--3. What would happen to the text box with id="text" if it added this line to the code above: text.textContent = "Hello!" 
+      ANSWER:I do not believe anything will happen because you are using text.textContent="Hello!" for a void element. A void element does not have an open and closed tag and therefore there is no text in between those tags to manipulate. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mood Changer</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 50px;
+      transition: background-color 0.5s ease, color 0.5s ease;
+      min-height: 100vh;
+    }
+    h1 { font-size: 3rem; margin-bottom: 20px; }
+    #moodButtons {
+      margin: 20px 0;
+    }
+    .mood-btn {
+      padding: 12px 20px;
+      margin: 8px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      transition: transform 0.2s;
+    }
+    .mood-btn:hover { transform: scale(1.05); }
+    #moodDisplay { margin-top: 30px; font-size: 1.5rem; font-style: italic; }
+  </style>
+</head>
+<body>
+  <h1>How are you feeling?</h1>
+  <p>Click a mood to change the vibe!</p>
+
+  <!-- Button container -->
+  <div id="moodButtons">
+    <button class="mood-btn" data-mood="happy">Happy</button>
+    <button class="mood-btn" data-mood="calm">Calm</button>
+    <button class="mood-btn" data-mood="excited">Excited</button>
+    <button class="mood-btn" data-mood="chill">Chill</button>
+    <button class="mood-btn" data-mood="mysterious">Mysterious</button>
+    <button class="mood-btn" data-mood="reset">Reset</button> <!--added a reset button to reset the screen without having to click the refresh button-->
+  </div>
+
+  <p id="moodDisplay">Choose a mood...</p>
+
+  <script src="mood.js"></script>
+</body>
+</html>
