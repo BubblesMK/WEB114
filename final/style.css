@@ -24,7 +24,7 @@ body {
     text-align: center;
 }
 
-#coffee { /*italicized the p element to allow for a distinction between the heading and fact*/
+#coffeeFact { /*italicized the p element to allow for a distinction between the heading and fact*/
     font-size: 1.3em;
     font-style: italic;
     color: #141414;
@@ -50,7 +50,7 @@ button:hover {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 
-    #coffee {
+    #coffeeFact {
         font-size: 1em;
         padding: 10px;
         border-radius: 20px;
