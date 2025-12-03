@@ -1,0 +1,1 @@
+I chose the Coffee Fact Generator project. I’m a coffee lover and thought it would be fun to share random coffee facts. This project taught me how detailed you need to be when writing JavaScript and how HTML, CSS, and JavaScript work together to make a page interactive.
